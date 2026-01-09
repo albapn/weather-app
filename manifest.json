@@ -45,7 +45,7 @@
             "src": "assets/favicons/favicon_32x32.png",
             "sizes": "32x32",
             "type": "image/png"
-        }
+        },
         {
             "src": "assets/favicons/favicon_48x48@1x.png",
             "sizes": "48x48",
