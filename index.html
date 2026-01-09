@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 64</title>
+    <link rel="stylesheet" href="./style/bulma.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HanheldFriendly" content="true" />
+
+    <!-- Meta etiquetas PWA para Apple -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-startup-image" href="assets/favicons/favicon_512x512@1x.png" />
+
+    <!-- Configuración General PWA -->
+    <link rel="manifest" href="manifest.json" />
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/favicons/favicon_16x16@1x.png">
+    <link rel="apple-touch-icon" href="assets/favicons/favicon_32x32@1x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon_152x152@1x.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/favicons/favicon_512x512@1x.png">
+
+</head>
+
+<body>
+   
+   
+     <!-- <video id="video" autoplay loop muted>
+        <source src="./assets/videos/221180_small.mp4" type="video/mp4">
+    </video>  -->
+      <video id="video" autoplay loop muted src="./assets/video/fondo-dia.mp4" >
+    </video> 
+    <header class="header">
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    WeatherApp
+
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">
+                        Inicio
+                    </a>
+
+                    <a class="navbar-item" onclick="actualizarDatos(42.61, -8.79)">
+                        Vilagarcia de Arousa
+                    </a>
+                    <a class="navbar-item" onclick="actualizarDatos(42.22,-8.88)">
+                        Vigo
+                    </a>
+                    <a class="navbar-item" onclick="actualizarDatos(47.41,8.44)">
+                        Weiningerstrasse
+                    </a>
+                    <a class="navbar-item" onclick="actualizarDatos(47.20,8.49)">
+                        Wädenswil
+                    </a>
+                    <a  class="navbar-item" onclick="actualizarDatos(35.50,138.45)">Tokyo</a>
+
+
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Buscar cidade</strong>
+                            </a>
+                            <a class="button is-light">
+                                Sign up
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+        <div class="general">
+            <div class="is-flex is-justify-content-center is-flex-direction-column is-align-items-center">
+                <img id="iconWeather" src="./assets/iconos/01d.png" alt="logo icon">
+                <h3 id="temperatureWeather">23ºC</h3>
+                <h2 id="location">vilagarcia</h2>
+                <p class="descriptionWeather" id="descripcion">descripción tiempo</p>
+            </div>
+            <div class="date is-flex is-justify-content-center">
+                <p class="date__p my-3" id="data"></p>
+            </div>
+        </div>
+        <div class="detalles">
+            <div class=" box is-flex is-justify-content-space-between">
+                <p><strong>Temperatura máx.:</strong></p>
+                <p id="temrMax">23ºC</p>
+            </div>
+            <div class=" box is-flex is-justify-content-space-between">
+                <p><strong>Temperatura min.:</strong></p>
+                <p id="temrMin">23ºC</p>
+            </div>
+            <div class=" box is-flex is-justify-content-space-between">
+                <p><strong>Humedad:</strong></p>
+                <p id="humidity">40%</p>
+            </div>
+            <div class=" box is-flex is-justify-content-space-between">
+                <p><strong>Velocidad viento:</strong></p>
+                <p id="viento">40 mtr/seg.</p>
+            </div>
+            <div class=" box is-flex is-justify-content-space-between">
+                <p><strong>Amanecer:</strong></p>
+                <p id="sunrise"></p>
+            </div>
+            <div class=" box is-flex is-justify-content-space-between">
+                <p><strong>Atardecer:</strong></p>
+                <p id="sunset"></p>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
